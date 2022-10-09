@@ -59,7 +59,6 @@ public class TemaController {
 	@DeleteMapping("/{id}")
 	public void delete(@PathVariable Long id){
 	    Optional<Tema> tema = temaRepository.findById(id);
-	  
 	    if(tema.isEmpty())
 	      throw new ResponseStatusException(HttpStatus.NOT_FOUND);
 	       
